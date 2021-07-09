@@ -5,7 +5,7 @@
 To foster large-scale research on vulnerability mitigation and to enable a comparison of different detection approaches, we make our dataset ***PatchDB*** from our DSN21 paper publicly available. 
 
 PatchDB is a large-scale security patch dataset that contains around 12K security patches and 24K non-security patches from the real world. 
-You can find more details on the dataset in the paper *"[PatchDB: A Large-Scale Security Patch Dataset](http://mason.gmu.edu/~swang47/papers/dsn21_PatchDB.pdf)"*.
+You can find more details on the dataset in the paper *"[PatchDB: A Large-Scale Security Patch Dataset](http://mason.gmu.edu/~swang47/papers/dsn21_PatchDB.pdf)"*. You can also visit our [PatchDB official website](https://sunlab-gmu.github.io/PatchDB) for more information.
 
 ## Download Policy
 
