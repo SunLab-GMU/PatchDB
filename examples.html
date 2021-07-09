@@ -63,6 +63,7 @@
 			<p style="font-size:14pt;">
 				Below are some typical examples in PatchDB.
 			</p>
+			
 			<p style="font-size:15pt;">
 				<strong>Example I: Buffer Overflow</strong>
 			</p>
@@ -72,16 +73,16 @@ From: Johan Hedberg <johan.hedberg@intel.com>
 Date: Wed, 7 Sep 2016 08:45:12 +0300
 Subject: tools/csr: Fix possible buffer overflow
 
-Make sure we don't write past the end of the array.
+<font color="black">Make sure we don't write past the end of the array.</font>
 ---
  tools/csr.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/tools/csr.c b/tools/csr.c
+<font color="#5114D9">diff --git a/tools/csr.c b/tools/csr.c</font>
 index 2c0918909..15ae7c4fb 100644
---- a/tools/csr.c
-+++ b/tools/csr.c
-@@ -2756,7 +2756,7 @@ static int parse_line(char *str)
+<font color="#cf3a4b">--- a/tools/csr.c</font>
+<font color="#1e9c41">+++ b/tools/csr.c</font>
+<font color="#9A21F0">@@ -2756,7 +2756,7 @@</font> static int parse_line(char *str)
  
  	off++;
  
@@ -92,6 +93,8 @@ index 2c0918909..15ae7c4fb 100644
  			break;
 -- 
 cgit 1.2-0.3.lf.el7</pre>
+
+
 			<p style="font-size:15pt;">
 				<strong>Example II: Info Leakage</strong>
 			</p>
@@ -102,16 +105,16 @@ Date: Tue, 3 Apr 2018 09:19:53 +0200
 Subject: [PATCH] util: make sure to close the authfile before returning
  success
 
-fixes #136
+<font color="black">fixes #136</font>
 ---
  util.c | 2 ++
  1 file changed, 2 insertions(+)
 
-diff --git a/util.c b/util.c
+<font color="#5114D9">diff --git a/util.c b/util.c</font>
 index 6cb4a79..32bca06 100644
---- a/util.c
-+++ b/util.c
-@@ -167,6 +167,8 @@ check_user_token (const char *authfile,
+<font color="#cf3a4b">--- a/util.c</font>
+<font color="#1e9c41">+++ b/util.c</font>
+<font color="#9A21F0">@@ -167,6 +167,8 @@</font> check_user_token (const char *authfile,
  		{
  		  if(verbose)
  		      D (debug_file, "Match user/token as %s/%s", username, otp_id);
@@ -120,6 +123,8 @@ index 6cb4a79..32bca06 100644
  		  return AUTH_FOUND;
  		}
  	    }</pre>
+		
+		
 			<p style="font-size:15pt;">
 				<strong>Example III: Double Free</strong>
 			</p>
@@ -129,8 +134,8 @@ From: Hou Tao <houtao1@huawei.com>
 Date: Fri, 3 Feb 2017 17:19:07 +0800
 Subject: [PATCH] blkcg: fix double free of new_blkg in blkcg_init_queue
 
-If blkg_create fails, new_blkg passed as an argument will
-be freed by blkg_create, so there is no need to free it again.
+<font color="black">If blkg_create fails, new_blkg passed as an argument will
+be freed by blkg_create, so there is no need to free it again.</font>
 
 Signed-off-by: Hou Tao <houtao1@huawei.com>
 Signed-off-by: Jens Axboe <axboe@fb.com>
@@ -138,11 +143,11 @@ Signed-off-by: Jens Axboe <axboe@fb.com>
  block/blk-cgroup.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/block/blk-cgroup.c b/block/blk-cgroup.c
+<font color="#5114D9">diff --git a/block/blk-cgroup.c b/block/blk-cgroup.c</font>
 index 37fe595cfd700..295e98c2c8ccd 100644
---- a/block/blk-cgroup.c
-+++ b/block/blk-cgroup.c
-@@ -1079,10 +1079,8 @@ int blkcg_init_queue(struct request_queue *q)
+<font color="#cf3a4b">--- a/block/blk-cgroup.c</font>
+<font color="#1e9c41">+++ b/block/blk-cgroup.c</font>
+<font color="#9A21F0">@@ -1079,10 +1079,8 @@</font> int blkcg_init_queue(struct request_queue *q)
  	if (preloaded)
  		radix_tree_preload_end();
  
@@ -154,6 +159,8 @@ index 37fe595cfd700..295e98c2c8ccd 100644
  
  	q->root_blkg = blkg;
  	q->root_rl.blkg = blkg;</pre>
+	
+	
 			<p style="font-size:15pt;">
 				<strong>Example IV: Integer Overflow</strong>
 			</p>
@@ -163,8 +170,8 @@ From: Kevin Wolf <kwolf@redhat.com>
 Date: Wed, 26 Mar 2014 13:05:53 +0100
 Subject: [PATCH] qcow2: Fix new L1 table size check (CVE-2014-0143)
 
-The size in bytes is assigned to an int later, so check that instead of
-the number of entries.
+<font color="black">The size in bytes is assigned to an int later, so check that instead of
+the number of entries.</font>
 
 Signed-off-by: Kevin Wolf <kwolf@redhat.com>
 Reviewed-by: Max Reitz <mreitz@redhat.com>
@@ -173,11 +180,11 @@ Signed-off-by: Stefan Hajnoczi <stefanha@redhat.com>
  block/qcow2-cluster.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/block/qcow2-cluster.c b/block/qcow2-cluster.c
+<font color="#5114D9">diff --git a/block/qcow2-cluster.c b/block/qcow2-cluster.c</font>
 index 9499df9..242e1f8 100644
---- a/block/qcow2-cluster.c
-+++ b/block/qcow2-cluster.c
-@@ -55,7 +55,7 @@ int qcow2_grow_l1_table(BlockDriverState *bs, uint64_t min_size,
+<font color="#cf3a4b">--- a/block/qcow2-cluster.c</font>
+<font color="#1e9c41">+++ b/block/qcow2-cluster.c</font>
+<font color="#9A21F0">@@ -55,7 +55,7 @@</font> int qcow2_grow_l1_table(BlockDriverState *bs, uint64_t min_size,
          }
      }
  
@@ -188,6 +195,8 @@ index 9499df9..242e1f8 100644
  
 -- 
 1.8.3.1</pre>
+
+
 			<p style="font-size:15pt;">
 				<strong>Example V: NULL Pointer Dereference</strong>
 			</p>
@@ -201,11 +210,11 @@ Subject: [PATCH] ResetUri: Protect against NULL
  src/UriCommon.c | 3 +++
  1 file changed, 3 insertions(+)
 
-diff --git a/src/UriCommon.c b/src/UriCommon.c
+<font color="#5114D9">diff --git a/src/UriCommon.c b/src/UriCommon.c</font>
 index 3775306..039beda 100644
---- a/src/UriCommon.c
-+++ b/src/UriCommon.c
-@@ -75,6 +75,9 @@
+<font color="#cf3a4b">--- a/src/UriCommon.c</font>
+<font color="#1e9c41">+++ b/src/UriCommon.c</font>
+<font color="#9A21F0">@@ -75,6 +75,9 @@</font>
  
  
  void URI_FUNC(ResetUri)(URI_TYPE(Uri) * uri) {
@@ -214,6 +223,8 @@ index 3775306..039beda 100644
 +	}</font>
  	memset(uri, 0, sizeof(URI_TYPE(Uri)));
  }</pre>
+ 
+ 
 			<p style="font-size:15pt;">
 				<strong>Example VI: Race Condition</strong>
 			</p>
@@ -223,12 +234,12 @@ From: Andy Honig <ahonig@google.com>
 Date: Wed, 27 Aug 2014 14:42:54 -0700
 Subject: [PATCH] KVM: x86: Improve thread safety in pit
 
-There's a race condition in the PIT emulation code in KVM.  In
+<font color="black">There's a race condition in the PIT emulation code in KVM.  In
 __kvm_migrate_pit_timer the pit_timer object is accessed without
 synchronization.  If the race condition occurs at the wrong time this
 can crash the host kernel.
 
-This fixes CVE-2014-3611.
+This fixes CVE-2014-3611.</font>
 
 Cc: stable@vger.kernel.org
 Signed-off-by: Andrew Honig <ahonig@google.com>
@@ -237,11 +248,11 @@ Signed-off-by: Paolo Bonzini <pbonzini@redhat.com>
  arch/x86/kvm/i8254.c | 2 ++
  1 file changed, 2 insertions(+)
 
-diff --git a/arch/x86/kvm/i8254.c b/arch/x86/kvm/i8254.c
+<font color="#5114D9">diff --git a/arch/x86/kvm/i8254.c b/arch/x86/kvm/i8254.c</font>
 index 518d86471b76f..298781d4cfb44 100644
---- a/arch/x86/kvm/i8254.c
-+++ b/arch/x86/kvm/i8254.c
-@@ -262,8 +262,10 @@ void __kvm_migrate_pit_timer(struct kvm_vcpu *vcpu)
+<font color="#cf3a4b">--- a/arch/x86/kvm/i8254.c</font>
+<font color="#1e9c41">+++ b/arch/x86/kvm/i8254.c</font>
+<font color="#9A21F0">@@ -262,8 +262,10 @@</font> void __kvm_migrate_pit_timer(struct kvm_vcpu *vcpu)
  		return;
  
  	timer = &pit->pit_state.timer;
@@ -252,6 +263,8 @@ index 518d86471b76f..298781d4cfb44 100644
  }
  
  static void destroy_pit_timer(struct kvm_pit *pit)</pre>
+ 
+ 
 			<p style="font-size:15pt;">
 				<strong>Example VII: Non-security Patch</strong>
 			</p>
@@ -260,13 +273,13 @@ commit 822959238c224535e2d71e936e9f8c8d27a10a59
 Author: roberto@precise64 <roberto@precise64>
 Date:   Thu Feb 23 16:58:36 2012 +0100
 
-    fixed a bug with --set
+<font color="black">    fixed a bug with --set</font>
 
-diff --git a/uwsgi.c b/uwsgi.c
+<font color="#5114D9">diff --git a/uwsgi.c b/uwsgi.c</font>
 index 3a24f6aa..178fb5db 100644
---- a/uwsgi.c
-+++ b/uwsgi.c
-@@ -3387,7 +3387,7 @@ void uwsgi_opt_set_placeholder(char *opt, char *value, void *none) {
+<font color="#cf3a4b">--- a/uwsgi.c</font>
+<font color="#1e9c41">+++ b/uwsgi.c</font>
+<font color="#9A21F0">@@ -3387,7 +3387,7 @@</font> void uwsgi_opt_set_placeholder(char *opt, char *value, void *none) {
  
  	p[0] = 0;
  	add_exported_option(uwsgi_str(value), p+1, 1);
