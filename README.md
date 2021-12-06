@@ -25,7 +25,7 @@ We will verify them and then send you the download link of PatchDB dataset.
 3. In the request form, please include your name, affiliation, work email, homepage, and the purpose of using PatchDB. \
    *The information is needed for verification.
    Note that your request may be ignored if we are not able to determine your identity or affiliation.
-   We do not share your information with any third parties.*
+   We do not share your personal information with any third parties.*
 
 4. Acknowledge all the information you provided is correct.
 
@@ -39,20 +39,20 @@ We will verify them and then send you the download link of PatchDB dataset.
 
 ```bibtex
 @inproceedings{wang2021PatchDB, 
-author={Wang, Xinda and Wang, Shu and Feng, Pengbin and Sun, Kun and Jajodia, Sushil},  
-booktitle={2021 51st Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)},   
-title={PatchDB: A Large-Scale Security Patch Dataset},   
-year={2021},  
-volume={},  
-number={},  
-pages={149-160},  
-doi={10.1109/DSN48987.2021.00030}}
+author={Wang, Xinda and Wang, Shu and Feng, Pengbin and Sun, Kun and Jajodia, Sushil},
+booktitle={2021 51st Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)}, 
+title={PatchDB: A Large-Scale Security Patch Dataset}, 
+year={2021},
+volume={},
+number={},
+pages={149-160},
+doi={10.1109/DSN48987.2021.00030}
 }
 ```
 
 or
 
-*Xinda Wang, Shu Wang, Pengbin Feng, Kun Sun and Sushil Jajodia, "PatchDB: A Large-Scale Security Patch Dataset," 2021 51th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), 2021.*
+*Xinda Wang, Shu Wang, Pengbin Feng, Kun Sun and Sushil Jajodia, "PatchDB: A Large-Scale Security Patch Dataset," 2021 51st Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN 2021), 2021, pp. 149-160, doi: 10.1109/DSN48987.2021.00030.*
 
 
 ## Disclaimer & Download Agreement<span id="jump"></span>
