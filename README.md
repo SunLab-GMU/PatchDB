@@ -10,8 +10,14 @@ You can find more details on the dataset in the paper *"[PatchDB: A Large-Scale 
 ## Download Policy
 
 We are happy to share PatchDB and hope you can find our dataset useful in your research. 
-However, in order to prevent any misuse, we kindly ask you to fill out a **request form** to state your identity and research scope. 
-We will verify them and then send you the download link of PatchDB dataset.
+
+**Option 1:** download the `json` format PatchDB from Hugging Face
+
+You can download the dataset from [https://huggingface.co/datasets/sunlab/patch_db](https://huggingface.co/datasets/sunlab/patch_db).
+
+This repository is publicly accessible. You need to log into Hugging Face, share your contact information (email and username), and agree to your terms and conditions (if any) to download the dataset.
+
+**Option 2:** download the `.zip` dataset using the **request form**. You need to state your identity and research scope. We will verify them and then send you the download link of PatchDB dataset.
 
 **Request Steps:**
 
